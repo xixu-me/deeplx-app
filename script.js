@@ -696,6 +696,12 @@ document.addEventListener("DOMContentLoaded", () => {
   updateSwapButtonState(); // Initialize swap button state
   lucide.createIcons(); // Initialize Lucide icons
 
+  // Update copyright year
+  const currentYearElement = document.getElementById("currentYear");
+  if (currentYearElement) {
+    currentYearElement.textContent = new Date().getFullYear();
+  }
+
   // Initial auto-translate if there's existing text
   if (elements.inputText.value.trim()) {
     scheduleAutoTranslate();
